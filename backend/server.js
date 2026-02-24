@@ -30,7 +30,7 @@ app.get("/", (req, res) => {
 });
 
 require("./app/routes/turorial.routes")(app);
-
+app.use("/tasks", require("./routes/taskRoutes"));
 // server
 const PORT = process.env.PORT || 10000;
 
